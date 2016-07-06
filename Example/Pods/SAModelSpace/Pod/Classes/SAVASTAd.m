@@ -32,6 +32,7 @@
             return (NSString*)item;
         }] mutableCopy];
         _creative = [[SAVASTCreative alloc] initWithJsonDictionary:[jsonDictionary safeObjectForKey:@"creative"]];
+        _extension = [[SAVASTExtension alloc] initWithJsonDictionary:[jsonDictionary safeObjectForKey:@"extension"]];
     }
     return self;
 }
@@ -45,7 +46,8 @@
         @"isImpressionSent": @(_isImpressionSent),
         @"Errors": [_Errors dictionaryRepresentation],
         @"Impressions": [_Impressions dictionaryRepresentation],
-        @"creative": nullSafe([_creative dictionaryRepresentation])
+        @"creative": nullSafe([_creative dictionaryRepresentation]),
+        @"extension": nullSafe([_creative dictionaryRepresentation])
     };
 }
 
@@ -63,6 +65,8 @@
     // and creatives (and for now we assume we only have linear ones)
     // don't sum-up creatives now
     [_creative sumCreative:ad.creative];
+    // suming extension
+    [_extension sumExtension:ad.extension];
 }
 
 @end

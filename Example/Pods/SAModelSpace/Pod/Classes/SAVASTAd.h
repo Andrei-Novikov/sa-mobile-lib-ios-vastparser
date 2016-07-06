@@ -10,6 +10,7 @@
 
 #import "SAJsonParser.h"
 #import "SAVASTCreative.h"
+#import "SAVASTExtension.h"
 
 //
 // @brief: this enum should hold the type of content an ad holds
@@ -31,6 +32,7 @@ typedef enum SAAdType {
 @property (nonatomic, strong) NSMutableArray<NSString*> *Impressions;
 @property (nonatomic, assign) BOOL isImpressionSent;
 @property (nonatomic, strong) SAVASTCreative *creative;
+@property (nonatomic, strong) SAVASTExtension *extension;
 
 // @brief: this function performs the sum of an Ad over the current Ad
 - (void) sumAd:(SAVASTAd*)ad;

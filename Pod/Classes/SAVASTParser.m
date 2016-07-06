@@ -14,6 +14,7 @@
 // import helpes
 #import "SAVASTAd.h"
 #import "SAVASTCreative.h"
+#import "SAVASTExtension.h"
 #import "SAVASTTracking.h"
 #import "SAVASTMediaFile.h"
 
@@ -158,6 +159,10 @@
     SAXMLElement *creativeElement = [SAXMLParser findFirstIntanceInSiblingsAndChildrenOf:adElement forName:@"Creative"];
     ad.creative = [self parseCreativeXML:creativeElement];
     
+    // get extension
+    SAXMLElement *extensionElement = [SAXMLParser findFirstIntanceInSiblingsAndChildrenOf:adElement forName:@"Extension"];
+    ad.extension = [self parseExtensionXML:extensionElement];
+    
     return ad;
 }
 
@@ -250,6 +255,26 @@
     else {
         return NULL;
     }
+}
+
+- (SAVASTExtension*) parseExtensionXML:(SAXMLElement *)element {
+    // create extension
+    SAVASTExtension *_extension = [[SAVASTExtension alloc] init];
+    
+    _extension.type = CustomTracking;
+    
+    // populate tracking
+    [SAXMLParser searchSiblingsAndChildrenOf:element forName:@"Tracking" andInterate:^(SAXMLElement *cTrackingElement) {
+        // since this is also a more "complex" object, which takes data from
+        // attributes as well as tag value, split the declaration and
+        // array assignmenent
+        SAVASTTracking *tracking = [[SAVASTTracking alloc] init];
+        tracking.event = [cTrackingElement getAttribute:@"event"];
+        tracking.URL = [SAUtils decodeHTMLEntitiesFrom:[cTrackingElement value]];
+        [_extension.TrackingEvents addObject:tracking];
+    }];
+    
+    return _extension;
 }
 
 - (void) dealloc {

@@ -50,6 +50,7 @@
 		856F84C53915B119E2F0F4EE48B08AD1 /* NSArray+SAJson.h in Headers */ = {isa = PBXBuildFile; fileRef = C4FB9B0F3BBA10FD7A8C272CB27A2BA4 /* NSArray+SAJson.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9590C5B134E65414BF070E5A2D664235 /* SABlackMask.m in Sources */ = {isa = PBXBuildFile; fileRef = E21349158FA227027E9B5D447E89B5F7 /* SABlackMask.m */; };
 		96968B9CBDB28C7A2A50A2FDA4F769C9 /* SAUtils-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F6162A31054DD345627804C0DA085B /* SAUtils-dummy.m */; };
+		983AF0441D2CD686005C9D7D /* SAVASTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 983AF0431D2CD686005C9D7D /* SAVASTExtension.m */; };
 		9AD9809FB0B3F3C956A5BDCA4A406410 /* SABlackMask.h in Headers */ = {isa = PBXBuildFile; fileRef = B4AEF095AE6F9D28BA22ADFD5DC8C599 /* SABlackMask.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9EA0E9CF0DAB21015AD1E48CE4CF384E /* SAVASTTracking.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAB3EBAE8FAAD79850C8E671BCE498B /* SAVASTTracking.m */; };
 		A5245382D00FBD82F916D99E04D2C8C4 /* SAJsonParser-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF6E60C744EAC88E536250BE326D12B /* SAJsonParser-dummy.m */; };
@@ -221,6 +222,8 @@
 		9242CE303948C89D94FFACDFA4DE9819 /* libSAModelSpace.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSAModelSpace.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		956D7A2255CC687554D3055A3D48B5D8 /* SADetails.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SADetails.m; path = Pod/Classes/SADetails.m; sourceTree = "<group>"; };
+		983AF0421D2CD686005C9D7D /* SAVASTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SAVASTExtension.h; path = Pod/Classes/SAVASTExtension.h; sourceTree = "<group>"; };
+		983AF0431D2CD686005C9D7D /* SAVASTExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SAVASTExtension.m; path = Pod/Classes/SAVASTExtension.m; sourceTree = "<group>"; };
 		984AB0F448CD2BF162377BC4D8252B37 /* SAVASTParser-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SAVASTParser-prefix.pch"; sourceTree = "<group>"; };
 		9944FBCB24974F7CECC5CB3E817A5A54 /* libPods-SAVASTParser_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SAVASTParser_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B2DE0DA2BAAF33C62CB5FD76D77378A /* SAExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAExtensions.h; path = Pod/Classes/SAExtensions.h; sourceTree = "<group>"; };
@@ -506,6 +509,8 @@
 				D0A35AF5FBDB8450FE96ADD8FF0533EE /* SAVASTAd.m */,
 				922614D337F87391B83C08D7493A4BFB /* SAVASTCreative.h */,
 				AD966987DC8E56542DDB589FC1F3B349 /* SAVASTCreative.m */,
+				983AF0421D2CD686005C9D7D /* SAVASTExtension.h */,
+				983AF0431D2CD686005C9D7D /* SAVASTExtension.m */,
 				A912643E778E25827932BE9C2F253C34 /* SAVASTMediaFile.h */,
 				65D2E21E0D282C51BEB12272CBE2FB98 /* SAVASTMediaFile.m */,
 				9C037202F552CB455E1400417F2ABDA1 /* SAVASTTracking.h */,
@@ -924,6 +929,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D24F3F4A131966B00F9C76B5DBF7229 /* Pods-SAVASTParser_Example-dummy.m in Sources */,
+				983AF0441D2CD686005C9D7D /* SAVASTExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
